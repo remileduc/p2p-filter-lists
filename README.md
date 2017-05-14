@@ -37,16 +37,18 @@ The script downloads several lists and concatenate them into one `.p2p` file. Th
 For Linux
 =========
 
-You can simply run the script. The final file will be created in `/tmp/qbittorrent_lists_$USER.p2p`.
+You can simply run the script `dl-p2p-lists.sh`. The final file will be created in `/tmp/qbittorrent_lists_$USER.p2p`.
 
 For Windows
 ===========
 
-You can run the script by simply double clicking on it. Nothing will happen until it is finished (1 or more minutes depending on your Internet connection), where a popup will show telling you the script is finished.
+You can run the script by simply double clicking on `dl-p2p-lists.vbs`. Nothing visible will happen until it is finished (1 or more minutes depending on your Internet connection), where a popup will show telling you the script is finished.
 
 For Windows, you need the `bin` folder as it contains an executable for `wget`, to download the lists.
 
 The created file will be located in `%TEMP%\qbittorrent\list.p2p`, so usually in `C:\Users\<username>\AppData\Local\Temp\qbittorrent\list.p2p`.
+
+**NOTE:** The script for Windows may be improved... Currently, compared to the Linux script, nothing is parallelized (one download and one extraction at a time). Moreover, for some reasons, the Windows script adds a lot of duplicated lines in the final file. So you may think that the Linux script is missing stuff, but it is more like the reverse. Anyway, it still works fine enough.
 
 With qBittorrent
 ================
